@@ -1,25 +1,19 @@
 
+//connecting the routes here
+
 const express = require('express'); 
 
 const app = express();
+const path = require("node:path");
+
+app.set("views", path.join(__dirname, "views"));
 app.set('view engine', 'ejs');
 
-const messages = [
-  {
-    text: "Hi there!",
-    user: "Amando",
-    added: new Date()
-  },
-  {
-    text: "Hello World!",
-    user: "Charles",
-    added: new Date()
-  }
-];
+const indexRouter = require('./routes/index');
+const messageRouter = require('./routes/new');
 
-app.get("/", (req, res) => {
-  res.render("index", { messages: messages });
-});
+app.use('/', indexRouter); // passing callback to route
+app.use('/new', messageRouter); // passing callback to route
 
 const PORT = 8080;
 app.listen(PORT, () => {
