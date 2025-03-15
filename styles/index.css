@@ -1,2 +1,45 @@
 * {border: solid red 1px};
 
+body {
+  min-height: 100vh;
+}
+
+#main {
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#headerContainer {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#messagesContainer {
+  width: 80%;
+  height: 60%;
+}
+
+#messageInfoContainer {
+  display: grid;
+  grid-template-columns: repeat(1fr, 10) ;
+  grid-template-rows: repeat(1fr, 10);
+}
+
+#messageInfoContainer {
+  grid-column: 1/11;
+  grid-row: 1/4;
+  display: flex;
+  flex-direction: column;
+}
+
+#textContainer {
+  grid-column: 1/11;
+  grid-row: 4/11;
+}

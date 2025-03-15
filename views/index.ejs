@@ -4,10 +4,15 @@
     <link rel="stylesheet" type="text/css" href="index.css" />
   </head>
   <body>
-    <ul>
-      <% messages.forEach((message) => { %>
-        <%- include('message', {message: message.text}); %>
-      <% }); %>
-    </ul>    
+    <div id="headerContainer">
+      <div>Message Board</div>
+    </div>
+    <div id="main">
+      <div id="messagesContainer">
+        <% messages.forEach((message) => { %>
+          <%- include('message', {username: message.user, date: message.addedDate, time: message.addedTime ,message: message.text}); %>
+        <% }); %>
+      </div>   
+    </div>
   </body>
 </html>

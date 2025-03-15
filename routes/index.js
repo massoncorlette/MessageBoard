@@ -7,15 +7,17 @@ messageRouter.use(express.urlencoded({ extended: true })); //parsing forum data 
 
 const messages = [
   {
-    text: "Hi there!",
-    user: "Amando",
-    added: new Date()
+    text: "Ahoy Minoy.",
+    user: "Bob",
+    addedDate: "3/1/2025",
+    addedTime: "1:00 PM"
   },
   {
-    text: "Hello World!",
-    user: "Charles",
-    added: new Date()
-  }
+    text: "Peace Out!",
+    user: "Tom",
+    addedDate: "3/14/2025",
+    addedTime: "6:00 AM"
+  },
 ];
 
 messageRouter.get("/", (req, res) => {
@@ -24,7 +26,18 @@ messageRouter.get("/", (req, res) => {
 
 messageRouter.post('/new', (req, res) => {
 
-  messages.push({ text: req.body.messagetext, user: req.body.fname, added: new Date() });
+  const timeOptions = { 
+    hour: 'numeric', 
+    minute: '2-digit', 
+    hour12: true 
+  };
+
+  const now = new Date();
+
+  const formattedDate = now.toLocaleDateString('en-US');
+  const formattedTime = now.toLocaleTimeString('en-US', timeOptions);
+
+  messages.push({ text: req.body.messagetext, user: req.body.fname, addedDate: formattedDate, addedTime: formattedTime });
 
   res.redirect("/");
 })
