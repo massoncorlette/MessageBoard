@@ -1,4 +1,6 @@
-* {border: solid red 1px};
+* {
+  border: solid red 1px;
+}
 
 body {
   min-height: 100vh;
@@ -21,25 +23,39 @@ body {
   align-items: center;
 }
 
+#addMessageContainer {
+  height: 5%;
+}
+
 #messagesContainer {
   width: 80%;
   height: 60%;
-}
-
-#messageInfoContainer {
-  display: grid;
-  grid-template-columns: repeat(1fr, 10) ;
-  grid-template-rows: repeat(1fr, 10);
-}
-
-#messageInfoContainer {
-  grid-column: 1/11;
-  grid-row: 1/4;
-  display: flex;
   flex-direction: column;
 }
 
-#textContainer {
-  grid-column: 1/11;
-  grid-row: 4/11;
+#messageContainer {
+  min-height: 100%;
+  max-width: 100%;
+  margin: 3%;
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(1fr, 4);
+  grid-template-rows: repeat(1fr, 8);
+}
+
+#messageInfoContainer,
+#dateContainer {
+  display: flex;
+}
+#usertextContainer {
+  max-width: 100%;
+  display: flex;
+}
+
+#forumContainer {
+  width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

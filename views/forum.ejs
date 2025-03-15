@@ -1,13 +1,27 @@
 
-<form method="POST" action="/new">
-  <fieldset>
-    <legend>Add Message</legend>
-    <label for="fname">First name:</label><br>
-    <input type="text" id="fname" name="fname" value="John"><br>
-    <label for="lname">Last name:</label><br>
-    <input type="text" id="lname" name="lname" value="Doe"><br><br>
-    <label for="message">Enter Message:</label><br>
-    <input type="text" name="messagetext"></input><br>
-    <input type="submit" value="Submit">
-  </fieldset>
-</form>
+
+<html>
+  <head>
+    <title>Homepage</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+  </head>
+  <body>
+    <div id="headerContainer">
+      <div>Message Board</div>
+    </div>
+    <div id="forumContainer">
+      <form method="POST" action="/new">
+        <fieldset>
+          <legend>Add Message</legend>
+          <label for="fname">First name:</label><br>
+          <input type="text" id="fname" name="fname" value="John"><br>
+          <label for="lname">Last name:</label><br>
+          <input type="text" id="lname" name="lname" value="Doe"><br><br>
+          <label for="message">Enter Message:</label><br>
+          <input type="text" name="messagetext"></input><br>
+          <input type="submit" value="Submit">
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
