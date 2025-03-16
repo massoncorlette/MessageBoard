@@ -1,8 +1,9 @@
 * {
-  border: solid red 1px;
+  border: solid rgba(255, 138, 138, 0.568) 1px;
 }
 
 body {
+  font-family: "Montserrat", sans-serif;;
   min-height: 100vh;
 }
 
@@ -23,22 +24,22 @@ body {
   align-items: center;
 }
 
-#addMessageContainer {
-  opacity: 80%;
+#addMessageContainer, #addMessageContainerAlt {
+  opacity: 70%;
   position:fixed;
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: rgb(0, 89, 255);
-  left: 90%;
-  top: 80%;
+  left: 85%;
+  top: 20%;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-#addMessageContainer button {
+#addMessageContainer button, #addMessageContainerAlt button {
   height: 100%;
   width: 100%;
   border-radius: 50%;
@@ -48,15 +49,24 @@ body {
   align-items: center;
   justify-content: center;
   transition: transform 0.2s ease, opacity 0.2s ease;
+
 }
 
-#addMessageContainer button:hover {
+#addMessageContainer:hover, #addMessageContainerAlt:hover {
+  opacity: 100%;
+}
+
+#addMessageContainerAlt button {
+  background-color: grey;
+}
+
+#addMessageContainer button:hover, #addMessageContainerAlt button:hover {
   cursor: pointer;
-  transform: scale(1.1);
+  transform: scale(1.2);
   opacity: 1;
 }
 
-#addMessageContainer img {
+#addMessageContainer img, #addMessageContainerAlt img {
   height: 50%;
   width: 50%;
 }
@@ -81,10 +91,27 @@ body {
 
 #messageInfoContainer,
 #dateContainer {
+  flex: 1;
   display: flex;
 }
+
+#dateContainer {
+  gap: 1%;
+  border-bottom: solid blue 1px;
+}
+
+#userName {
+  font-weight: 500;
+}
+
 #usertextContainer {
-  display: flex;
+
+  gap: 0.5%;
+}
+
+#date {
+  letter-spacing: 2px;
+  font-size: 0.8rem;
 }
 
 #forumContainer {
@@ -97,10 +124,51 @@ body {
 
 #textContainer {
   max-width: 100%; 
+  display: flex;
+  gap: 0.5%;
 }
 
 #text {
-  width: 100%;
-  width: 100%;  
+  font-family: "Quicksand", sans-serif;
   word-wrap: break-word; 
+  max-width: 95%;
+}
+
+#time {
+  flex: 2; 
+  min-width: 100%;
+  font-size: 0.6rem;
+  font-style: italic;
+  display: flex;
+  align-items: flex-end;
+}
+
+
+/*minimize */ 
+@media (max-width:1500px) {
+  body {
+    font-size: 0.9rem;
+  };
+}
+
+
+/* mobile */
+@media (max-width: 700px) {
+  
+  body {
+    font-size: 0.8rem;
+    margin: 3%;
+  }
+
+  #messagesContainer {
+    width: 100%
+  };
+
+
+
+  #addMessageContainer, #addMessageContainerAlt {
+    position: absolute;
+    left: 500px;
+  }
+
 }
