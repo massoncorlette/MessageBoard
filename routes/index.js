@@ -24,6 +24,7 @@ messageRouter.get("/", (req, res) => {
   res.render("index", { messages: messages });
 });
 
+
 messageRouter.post("/new", (req, res) => {
   const timeOptions = {
     hour: "numeric",
