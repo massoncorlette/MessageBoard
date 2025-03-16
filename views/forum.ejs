@@ -14,17 +14,17 @@
         <img id='imgsvg' src="/backarrow.svg" />
       </button>
     </div>
-    <div id="forumContainer">
+    <div id="formContainer">
       <form method="POST" action="/new">
         <fieldset>
-          <legend>Add Message</legend>
-          <label for="fname">First name:</label><br>
-          <input type="text" id="fname" name="fname" value="John"><br>
-          <label for="lname">Last name:</label><br>
-          <input type="text" id="lname" name="lname" value="Doe"><br><br>
-          <label for="message">Enter Message:</label><br>
-          <input type="text" name="messagetext"></input><br>
-          <input type="submit" value="Submit">
+          <legend>Add a message</legend>
+          <div class="formEntries">
+            <input placeholder="enter username" type="text" id="fname" name="fname"><br>
+          </div>
+          <div class="formEntries">
+            <input type="text" name="messagetext" placeholder="enter message"></input><br>
+            <input type="submit" value="Submit">
+          </div>
         </fieldset>
       </form>
     </div>
