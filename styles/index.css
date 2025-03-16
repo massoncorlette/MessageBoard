@@ -38,9 +38,6 @@ body {
   max-width: 100%;
   margin: 3%;
   flex: 1;
-  display: grid;
-  grid-template-columns: repeat(1fr, 4);
-  grid-template-rows: repeat(1fr, 8);
 }
 
 #messageInfoContainer,
@@ -48,7 +45,6 @@ body {
   display: flex;
 }
 #usertextContainer {
-  max-width: 100%;
   display: flex;
 }
 
@@ -58,4 +54,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#textContainer {
+  max-width: 100%; 
+}
+
+#text {
+  width: 100%;
+  width: 100%;  
+  word-wrap: break-word; 
 }
