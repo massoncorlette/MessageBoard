@@ -1,10 +1,11 @@
 * {
-  border: solid rgba(255, 127, 127, 0.342) 1px;
+  border: solid rgba(255, 255, 255, 0) 1px;
 }
 
 body {
   font-family: "Montserrat", sans-serif;;
   min-height: 100vh;
+  background-color: rgb(245, 245, 245);
 }
 
 #main {
@@ -24,6 +25,11 @@ body {
   align-items: center;
 }
 
+#headerContainer div {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
 #addMessageContainer, #addMessageContainerAlt {
   opacity: 70%;
   position:fixed;
@@ -35,7 +41,7 @@ body {
   justify-content: center;
   background-color: rgb(0, 89, 255);
   left: 85%;
-  top: 20%;
+  top: 15%;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -77,9 +83,11 @@ body {
 }
 
 #messagesContainer {
+  color: white;
   width: 80%;
   height: 60%;
   flex-direction: column;
+  background-color: rgb(5, 24, 58);
 }
 
 #messageContainer {
@@ -87,6 +95,7 @@ body {
   max-width: 100%;
   margin: 3%;
   flex: 1;
+
 }
 
 #messageInfoContainer,
@@ -120,6 +129,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+}
+
+legend {
+  font-style: italic;
+}
+
+img {
+  border: none;
 }
 
 form {
@@ -159,10 +176,13 @@ input:focus {
   max-width: 100%; 
   display: flex;
   gap: 0.5%;
+  flex-wrap: wrap;
+  margin-left: 0.5%;
 }
 
 #text {
   font-family: "Quicksand", sans-serif;
+  overflow: break-word;
   word-wrap: break-word; 
   max-width: 95%;
 }

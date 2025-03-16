@@ -8,7 +8,7 @@
   </head>
   <body>
     <div id="headerContainer">
-      <div>Message Board</div>
+      <div>Epic Message Board</div>
     </div>
     <div id="addMessageContainer">
       <button onclick="window.location.href='/new'">
@@ -18,7 +18,7 @@
     <div id="main">
       <div id="messagesContainer">
         <% messages.forEach((message) => { %>
-          <%- include('message', {username: message.user, date: message.addedDate, time: message.addedTime ,message: message.text}); %>
+          <%- include('message', {username: message.user, date: message.addedDate, time: message.addedTime ,message: message.text, color:message.color}); %>
         <% }); %>
       </div>   
     </div>

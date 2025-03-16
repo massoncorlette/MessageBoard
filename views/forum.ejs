@@ -4,10 +4,13 @@
   <head>
     <title>Homepage</title>
     <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
   </head>
   <body>
     <div id="headerContainer">
-      <div>Message Board</div>
+      <div>Epic Message Board</div>
     </div>
     <div id="addMessageContainerAlt">
       <button onclick="window.location.href='/'">
@@ -17,12 +20,12 @@
     <div id="formContainer">
       <form method="POST" action="/new">
         <fieldset>
-          <legend>Add a message</legend>
+          <legend>Add an epic message</legend>
           <div class="formEntries">
-            <input placeholder="enter username" type="text" id="fname" name="fname"><br>
+            <input placeholder="enter username" type="text" id="fname" name="fname" required><br>
           </div>
           <div class="formEntries">
-            <input type="text" name="messagetext" placeholder="enter message"></input><br>
+            <input type="text" name="messagetext" placeholder="enter message" required><br>
             <input type="submit" value="Submit">
           </div>
         </fieldset>
