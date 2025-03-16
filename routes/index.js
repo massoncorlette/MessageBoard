@@ -7,7 +7,7 @@ messageRouter.use(express.urlencoded({ extended: true })); //parsing forum data 
 
 const messages = [
   {
-    text: "Ahoy Minoy.",
+    text: "Hoy Minoy.",
     user: "xXBob123Xx",
     addedDate: "3/1/2025",
     addedTime: "1:00 PM",
