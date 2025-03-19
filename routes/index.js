@@ -2,8 +2,8 @@ const express = require("express");
 
 const { Router } = require("express");
 
-const messageRouter = Router();
-messageRouter.use(express.urlencoded({ extended: true })); //parsing forum data to req.body
+const indexRouter = Router();
+indexRouter.use(express.urlencoded({ extended: true })); //parsing forum data to req.body
 
 const messages = [
   {
@@ -39,12 +39,12 @@ const vividColors = [
   "rgb(255, 165, 0)",   
 ];
 
-messageRouter.get("/", (req, res) => {
+indexRouter.get("/", (req, res) => {
   res.render("index", { messages: messages });
 });
 
 
-messageRouter.post("/new", (req, res) => {
+indexRouter.post("/new", (req, res) => {
   const timeOptions = {
     hour: "numeric",
     minute: "2-digit",
@@ -69,4 +69,4 @@ messageRouter.post("/new", (req, res) => {
   res.redirect("/");
 });
 
-module.exports = messageRouter;
+module.exports = indexRouter;
