@@ -17,7 +17,7 @@ const messageRouter = require("./routes/new");
 app.use("/", indexRouter); // passing callback to route
 app.use("/new", messageRouter); // passing callback to route
 
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
-  console.log("Port listening");
+  console.log(`Server running on port ${PORT}`);
 });
